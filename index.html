@@ -15,6 +15,20 @@
 			h3{
 				color: orange;
 			}
+			#welcomeMsg {
+				font-style: ariel; 
+				color: blue;
+				font-size: 30px;
+			}
+			.box{
+				border: 5px dashed #534;
+				padding-left: 20px;
+				margin-left: 5px;
+				margin-right: 5px;
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -22,13 +36,38 @@
 
 		<h1>Austin Lai</h1>
 
-		<h3> 3 Things About Me</h3>
-			<ul>
-				<li>I play sports as much as possible</li>
-				<li>I love traveling</li>
-				<li>I have lived in Oakland all my life</li>
-			</ul>
+		<div id="welcomeMsg">Welcome to my portfolio.</div>
 
-		<p>Welcome to my portfolio. I go to <a href="http://oaklandtech.com/"> oakland tech high school </a>. I am passionate about exercise and travel. After school I want to travel around the world going on adventures learning about new places and meeting new people.</p>
+		<div class="box">
+			<h3> 3 Things About Me</h3>
+				<ul>
+					<li>I play sports as much as possible</li>
+					<li>I love traveling</li>
+					<li>I haved lived in Oakland all my life</li>
+				</ul>
+		</div>	
+
+		<p>I go to <a href="http://oaklandtech.com/"> oakland tech high school </a>. I am passionate about exercise and travel.<br/> After school I want to travel around the world going on adventures learning <br/>about new places and meeting new people.</p>
+
+		 <script>
+      //here is where we put our JS scripts
+      //ps: this is a comment and the browser ignores it
+
+      //the document.onload is an event that trigger
+      // the function myFunction() when the documents is loaded 
+      document.onload = myFunction();
+
+      function myFunction(){
+
+      	var listMessages = ["Hello", "Welcome", "Hey", "How are you","Hi","Read me"];
+      	var randomNumber = Math.floor(Math.random() * listMessages.length);
+
+			document.getElementById("welcomeMsg").innerHTML = listMessages[randomNumber];
+
+
+          
+      }
+
+    </script>
 	</body>
 </html>
